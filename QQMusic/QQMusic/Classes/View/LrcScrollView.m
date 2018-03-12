@@ -136,7 +136,7 @@
 
 - (UIImage *)createLrcImageAtIndex:(NSInteger)index {
     // 1.获取当前显示的图片
-    MusicModel  *currentMusic = [[[MusicTool alloc]init] currentMusic];
+    MusicModel  *currentMusic = [[MusicTool shareInstance] currentMusic];
     if (!currentMusic) {
         return nil;
     }
