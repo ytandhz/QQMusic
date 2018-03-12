@@ -47,6 +47,7 @@ static  NSString *IconViewAnim = @"IconViewAnim";
     self.lrcScrollView.delegate = self;
     self.lrcScrollView.showsHorizontalScrollIndicator = NO;
     self.lrcScrollView.pagingEnabled = YES;
+    [self.playOrPauseBtn setImage:[UIImage imageNamed:@"player_btn_play_normal"] forState:UIControlStateSelected];
     [self startPlayingMusic];
 }
 
@@ -226,6 +227,7 @@ static  NSString *IconViewAnim = @"IconViewAnim";
     // 1.获取上一首歌曲
     MusicModel *previousMusic = [[MusicTool shareInstance] getPreviousMusic];
     [MusicTool shareInstance].currentMusic = previousMusic;
+    self.playOrPauseBtn.selected = NO;
     // 2.播放歌曲
     [self startPlayingMusic];
 }
@@ -234,6 +236,7 @@ static  NSString *IconViewAnim = @"IconViewAnim";
 - (IBAction)nextMusic {
     MusicModel *nextMusic = [[MusicTool shareInstance] getNextMusic];
     [MusicTool shareInstance].currentMusic = nextMusic;
+    self.playOrPauseBtn.selected = NO;
     [self startPlayingMusic];
 }
 
