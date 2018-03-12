@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1266980F2056B03500E73489 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1266980E2056B03500E73489 /* Default.png */; };
 		127C31D4205632A8002FD3B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 127C31D3205632A8002FD3B7 /* AppDelegate.m */; };
-		127C31D7205632A8002FD3B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 127C31D6205632A8002FD3B7 /* ViewController.m */; };
 		127C31DA205632A8002FD3B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127C31D8205632A8002FD3B7 /* Main.storyboard */; };
 		127C31DC205632A8002FD3B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 127C31DB205632A8002FD3B7 /* Assets.xcassets */; };
 		127C31DF205632A8002FD3B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127C31DD205632A8002FD3B7 /* LaunchScreen.storyboard */; };
@@ -72,8 +71,6 @@
 		127C31CF205632A7002FD3B7 /* QQMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QQMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		127C31D2205632A8002FD3B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		127C31D3205632A8002FD3B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		127C31D5205632A8002FD3B7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		127C31D6205632A8002FD3B7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		127C31D9205632A8002FD3B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		127C31DB205632A8002FD3B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		127C31DE205632A8002FD3B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -175,8 +172,6 @@
 				127C31E820563352002FD3B7 /* Classes */,
 				127C31D2205632A8002FD3B7 /* AppDelegate.h */,
 				127C31D3205632A8002FD3B7 /* AppDelegate.m */,
-				127C31D5205632A8002FD3B7 /* ViewController.h */,
-				127C31D6205632A8002FD3B7 /* ViewController.m */,
 				127C31D8205632A8002FD3B7 /* Main.storyboard */,
 				127C31DB205632A8002FD3B7 /* Assets.xcassets */,
 				127C31DD205632A8002FD3B7 /* LaunchScreen.storyboard */,
@@ -437,7 +432,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				127C31D7205632A8002FD3B7 /* ViewController.m in Sources */,
 				127C326120564C69002FD3B7 /* LrcScrollView.m in Sources */,
 				127C324820563392002FD3B7 /* MusicModel.m in Sources */,
 				127C325B205649D2002FD3B7 /* LrcLabel.m in Sources */,
