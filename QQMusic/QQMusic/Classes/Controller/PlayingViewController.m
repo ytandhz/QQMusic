@@ -45,6 +45,8 @@ static  NSString *IconViewAnim = @"IconViewAnim";
     self.lrcScrollView.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width *2, 0);
     self.lrcScrollView.customDelegate = self;
     self.lrcScrollView.delegate = self;
+    self.lrcScrollView.showsHorizontalScrollIndicator = NO;
+    self.lrcScrollView.pagingEnabled = YES;
     [self startPlayingMusic];
 }
 
@@ -85,6 +87,8 @@ static  NSString *IconViewAnim = @"IconViewAnim";
     self.bgImageView.image = [UIImage imageNamed:currentMusic.icon];
     self.songLabel.text = currentMusic.name;
     self.singerLabel.text = currentMusic.singer;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap:)];
+    [self.progressView addGestureRecognizer:tap];
     // 3.播放当前歌曲
     AVAudioPlayer *player = [[MusicPlayerTool shareInstance] playMusicWithName:currentMusic.filename];
     self.player = player;
@@ -250,6 +254,21 @@ static  NSString *IconViewAnim = @"IconViewAnim";
     [self addProgressTimer];
 }
 
+- (void)tap:(UITapGestureRecognizer *)tap {
+    // 1.获取点击的的位置
+    CGPoint point = [tap locationInView:self.progressView];
+    // 2.计算比例
+    CGFloat ratio = point.x /self.progressView.bounds.size.width;
+    // 3.计算当前需要播放的时间
+    self.player.currentTime = self.player.duration * ratio;
+    // 4.更新进度
+    [self updateProgressInfo];
+    // 5.添加定时器
+    if (self.progressTimer == nil) {
+        [self addProgressTimer];
+    }
+    
+}
 
 #pragma mark -- LrcScrollViewDelegate
 - (void)lrcScrollView:(LrcScrollView *)lrcView currentLrcText:(NSString *)lrcText lrcImage:(UIImage *)lrcimg {
